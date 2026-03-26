@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JYKAJ TECNOLOGY | Tienda de Juegos</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link rel="stylesheet" href="/css/factura.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">    
+        
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/templates/Index.html"><img src="./img/logo.png" alt="Logo"></a>
+        </div>
+    <ul>
+        <li><a href="/index.html">INICIO</a></li>
+        <li><a href="Equipos.html">EQUIPOS Y ACCESORIOS</a></li>
+        <li><a href="Juegos.html">JUEGOS</a></li>
+        <li><a href="Nosotros.html">NOSOTROS</a></li>
+        <li><a href="./factura.html">FACTURA</a></li>
+        
+    </ul>
+            <div class="navbar-right">
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">🔍</button>
+            </form>
+            <a href="#" class="btn-login">Login</a>
+            <a href="./carrito.html"  class="cart">🛒</a>
+            
+        </div>
+    </nav>
+
+<center>
+        <!-- seccion  de cabecera de encabezado de factura -->
+        <table>
+            <caption>FACTURA DE VENTAS</caption>
+            <tr>
+                <th>Nombre</th>
+                <th><input type="text" name="" id="" size="20" required></th>
+                <th>Tipo de documento</th>
+                <th><select name="" id="tp">
+                    <option value="CC">CC</option>
+                    <option value="PT">PT</option>
+                    <option value="TI">TI</option>
+                </select></th>
+                <th>No.Documento</th>
+                <th><input type="text" name="" id="" size="25 required"></th>
+            </tr>
+            <!-- 2 fila -->
+            <tr>
+                <th>Direccion</th>
+                <th><input type="text" name="" id="dir" size="20"></th>
+                <th>Telefono</th>
+                <th><input type="text" name="" id="tel" size="20"></th>
+                <th>Empleado</th>
+                <th><input type="text" name="" id="emp" size="25"></th>
+            </tr>
+            <!-- seccion  de cabecera de detalle de factura -->
+
+
+            <tr>
+                <th>REFERENCIA</th>
+                <th colspan="2">DESCRIPCION</th>
+                <th>CANTIDAD</th>
+                <th>VALOR UNITARIO</th>
+                <th>SUBTOTAL</th>
+            </tr>
+            <!-- 1 item  -->
+            <tr>
+                <th>
+                    <select name="prod1" id="prod1" onchange="mostrar();">
+                        <option value="">Seleccionar</option>
+                        <option value="189900">Kit Teclado Gamer</option>
+                        <option value="1200000">Silla Gamer</option>
+                        <option value="399000">Audifonos gamer</option>
+                    </select>
+                </th>
+                <th colspan="2"><input type="text" name="desc01" id="desc01" size="40" readonly></th>
+                <th><input type="number" name="cant01" id="cant01" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau01" id="vau01" size="15" readonly></th>
+                <th><input type="text" name="vat01" id="vat01" size="15" readonly></th>
+            </tr>
+
+
+        <!-- 2 item  -->
+            <tr>
+                <th>
+                    <select name="prod2" id="prod2" onchange="mostrar();">
+                        <option value="">Seleccionar</option>
+                        <option value="189900">Kit Teclado Gamer</option>
+                        <option value="1200000">Silla Gamer</option>
+                        <option value="399000">Audifonos gamer</option>
+                    </select>
+                </th>
+                <th colspan="2"><input type="text" name="desc02" id="desc02" size="40" readonly></th>
+                <th><input type="number" name="cant02" id="cant02" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau02" id="vau02" size="15" readonly></th>
+                <th><input type="text" name="vat02" id="vat02" size="15" readonly></th>
+            </tr>
+            <!-- 3 item -->
+            <tr>
+                <th>
+                    <select name="prod3" id="prod3" onchange="mostrar();">
+                        <option value="">Seleccionar</option>
+                        <option value="189900">Kit Teclado Gamer</option>
+                        <option value="1200000">Silla Gamer</option>
+                        <option value="399000">Audifonos gamer</option>
+                    </select>
+                </th>
+                <th colspan="2"><input type="text" name="desc03" id="desc03" size="40" readonly></th>
+                <th><input type="number" name="cant03" id="cant03" size="10" onchange="mostrar();"></th>
+                <th><input type="number" name="vau03" id="vau03" size="15" readonly></th>
+                <th><input type="text" name="vat03" id="vat03" size="15" readonly></th>
+            </tr>
+            <!--  seccion de Adicionales -->
+
+
+            <tr>
+                <th colspan="6">COMBOS</th>
+            </tr>
+            <tr>
+                <th colspan="2" rowspan="2"><img src="./img/combo_teclado.png" width="100" height="100" alt=""><input type="checkbox" name="checkbox1" id="checkbox1" onchange="mostrar();"> Kit Teclado Gamer </th>
+                <th colspan="2" rowspan="2"><img src="./img/combo_teclado.png" width="100" height="100" alt=""><input type="checkbox" name="checkbox2" id="checkbox2" onchange="mostrar();"> Silla Gamer </th>
+                <th colspan="2" rowspan="2"><img src="./img/silla_gaming.png" width="100" height="100"alt=""><input type="checkbox" name="checkbox3" id="checkbox3" onchange="mostrar();"> Audifonos gamer </th>
+            </tr>
+            <!-- SECCION LIQUIDACION FACTURA -->
+            <tr></tr>
+            <tr>
+                <th colspan="4">TOTAL COMBOS</th>
+                <th colspan="2"><input type="number" name="adic0" id="adic0" readonly></th>
+            </tr>
+            <tr>
+                <th colspan="2">FORMA DE PAGO</th>
+                <th colspan="2">
+                    <input type="radio" name="fp" id="radio1" value="Efectivo" onchange="mostrar();">Efectivo
+                    <br>
+                    <input type="radio" name="fp" id="radio2" value="Nequi" onchange="mostrar();">Nequi
+                    <br>
+                    <input type="radio" name="fp" id="radio3" value="TjCredito" onchange="mostrar()">TjCredito
+                    <br>
+                </th>
+                <!-- SUBTOTAL -->
+                <th>SUBTOTAL</th>
+                <td><input type="text" name="subt" id="subt" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th colspan="4" rowspan="3">OBSERVACIONES: REVISE SU PEDIDO ENTREGADO Y GRACIAS POR ATENDERTE!! </th>
+                <th>IVA</th>
+                <td><input type="text" name="iva" id="iva" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th>DESCUENTO</th>
+                <td><input type="text" name="desc" id="desc" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th>NETO PAGO</th>
+                <td><input type="text" name="neto" id="neto" size="25" readonly></td>
+            </tr>
+            <tr>
+                <th colspan="2"><input type="reset" value="BORRAR"></th>
+                <th colspan="4"><input type="button" value="ENVIAR" onclick="generar();"></th>
+            </tr>
+        </table>
+    </form>
+</center>
+<script src="../static/js/factura.js"></script>    
+
+<footer class="bg-dark text-white text-center py-4">
+<p class="mb-2">Todos los derechos reservados JOSE MANUEL CARABALLO</p>
+<div class="social-icons">
+    <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://x.com/?lang=es"  target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/legal/impressum"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+
+</div>
+</footer>
+
+</body>
+</html>

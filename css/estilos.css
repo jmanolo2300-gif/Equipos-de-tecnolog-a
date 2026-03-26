@@ -1,0 +1,565 @@
+/* --- ESTILOS GENERALES --- */
+body {
+  background: #000000 !important;
+  font-family: "BBH Sans Bogle", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portada img {
+  width: 800px;
+  padding-bottom: 50px;
+}
+
+.row {
+  padding: 0px 10%;
+  padding-bottom: 50px;
+}
+
+.carousel-item img {
+  margin: auto;
+  object-fit: cover;
+}
+
+.carousel-inner .carousel-item img {
+  height: 80vh;
+  width: 90vw;
+}
+
+#videos {
+  text-align: center;
+  margin-left: 5%;
+}
+
+iframe {
+  width: 300px;
+  height: 100%;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+h1 {
+  color: white;
+
+}
+h2 {
+  color: white;
+  
+
+}
+h3 {
+  color: white;
+}
+
+h4 {
+  color: white;
+}
+th {
+    color: rgb(207, 123, 123); /* Cambia todo el th a rojo */
+}
+
+#nosotros h2 {
+  color: red;
+  display: flex;
+  justify-content: center;
+}
+
+#nosotros p {
+  color: white;
+  text-align: center;
+}
+
+
+#nosotros li {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#sobre{
+  background: #111;
+  padding: 20px;
+  margin: 20px 10px 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#equipo{
+  background: #111;
+  padding: 20px;
+  margin: 20px 10px 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacto{
+  background: #111;
+  padding: 20px;
+  margin: 20px 10px 20px 10px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#contacto h2{
+  color: red;
+
+}
+
+#caja-contacto{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  background: #111;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+
+/* Logo */
+.navbar .logo img {
+  height: 65px;
+  width: 100px;
+}
+
+/* Menú principal */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: red;
+}
+
+/* --- NAVBAR EXTRA: Buscador + Login + Carrito --- */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buscador */
+.search-bar {
+  display: flex;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  outline: none;
+  width: 160px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background: red;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: darkred;
+}
+
+/* Botón Login */
+.btn-login {
+  padding: 8px 14px;
+  border: 1px solid red;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: red;
+  color: white;
+}
+
+/* Carrito */
+.cart {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.cart:hover {
+  color: red;
+}
+
+/* --- CONTENEDOR DE TARJETAS --- */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* --- TARJETAS DE JUEGOS --- */
+.game-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
+}
+
+/* --- LOGOS REDONDOS --- */
+.game-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #1a1a1a;
+  padding: 15px;
+  display: block;
+  margin: 0 auto 15px;
+  border: 2px solid #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto iluminado */
+.game-card img:hover {
+  border: 2px solid red;
+  box-shadow: 0 0 20px red;
+}
+
+/* --- TEXTOS --- */
+.game-subtitle {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.game-title {
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.game-desc {
+  font-size: 14px;
+  color: #ddd;
+  margin: 10px 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.container-product {
+  display: flex;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* --- BOTONES --- */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  background: red !important;
+  color: white !important;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease !important;
+}
+
+.btn:hover {
+  background: darkred !important;
+}
+
+/* --- DETALLES (Minecraft y demás) --- */
+.detail-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.detail-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.detail-img img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+.detail-text {
+  max-width: 500px;
+}
+
+.detail-text h1 {
+  font-size: 36px;
+  color: rgb(81, 255, 0);
+  margin-bottom: 15px;
+}
+
+.detail-text p {
+  font-size: 16px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+  .detail-section,
+  .detail-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* --- COLORES POR JUEGO --- */
+body.gta .detail-text h1 {
+  color: orange;
+}
+
+body.assassins .detail-text h1 {
+  color: #e60000;
+}
+
+body.assassins .btn {
+  background: #e60000;
+}
+
+body.cod .detail-text h1 {
+  color: #f1c40f;
+}
+
+body.cod .btn {
+  background: #f1c40f;
+  color: #000;
+}
+
+body.lol .detail-text h1 {
+  color: #0050e5;
+}
+
+body.lol .btn {
+  background: #1e90ff;
+  color: #fff;
+}
+
+body.fifa .detail-text h1 {
+  color: #2ecc71;
+}
+
+body.fifa .btn {
+  background: #2ecc71;
+  color: #000;
+}
+
+body.fortnite .detail-text h1 {
+  color: #a259ff;
+}
+
+body.fortnite .btn {
+  background: #a259ff;
+  color: #fff;
+}
+
+body.re4 .detail-text h1 {
+  color: #e74c3c;
+}
+
+body.re4 .btn {
+  background: #e74c3c;
+}
+
+body.roblox .detail-text h1 {
+  color: #47e3ff;
+}
+
+body.roblox .btn {
+  background: #47cbff;
+}
+
+body.forza5 .detail-text h1 {
+  color: #3498db;
+}
+
+body.forza5 .btn {
+  background: #3498db;
+}
+
+body.ets2 .detail-text h1 {
+  color: #f39c12;
+}
+
+body.ets2 .btn {
+  background: #f39c12;
+  color: #000;
+}
+
+/* --- 📱 AJUSTES RESPONSIVE PARA CELULARES --- */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .search-bar input {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* NavBar: convertir en columnas */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar .logo img {
+    height: 50px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar-right {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Ajustes para pantallas pequeñas */
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .game-card {
+    padding: 15px;
+  }
+
+  .game-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .game-title {
+    font-size: 18px;
+  }
+
+  .game-desc {
+    font-size: 13px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
